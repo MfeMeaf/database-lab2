@@ -24,7 +24,9 @@ CREATE TABLE employees (
 -- An employee can only have one passcard but not all employees get a passcard
 -- Additionally a passcard can only be assigned to one employee - Almost works as a identifier to certain employees.
 CREATE TABLE passcard(
-                         card_number INT AUTO_INCREMENT UNIQUE,
-                         date_of_issue DATE,
-                         date_of_expire DATE
+                        card_number INT AUTO_INCREMENT UNIQUE,
+                        date_of_issue DATE,
+                        date_of_expire DATE,
+                        employee,
+                        FOREIGN KEY (employee) REFERENCES employees(email_address)
 )
