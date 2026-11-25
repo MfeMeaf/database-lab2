@@ -1,11 +1,9 @@
 -- verify attributes
 -- Sections : Hold name, city and employees if any
 CREATE TABLE section(
-                        address_id INT AUTO_INCREMENT,
                         name VARCHAR(80) NOT NULL,
                         city VARCHAR(40) NOT NULL,
-                        --add refrences to employees that work at section
-                        PRIMARY KEY (address_id)
+                        PRIMARY KEY (name),
 );
 
 
