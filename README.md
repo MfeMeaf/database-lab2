@@ -1,22 +1,49 @@
 ## Databas lab 2 - Felix Lamu
 
-### Verksamhetsbeskrivning: personal och avdelningar
+### Verksamhetsbeskrivning: 
 
-Ett företag behöver ett register över sina anställda och avdelningar. För varje anställd ska systemet lagra förnamn,
-efternamn, e-postadress och anställningsdatum. E-postadressen ska vara unik. Varje anställd måste tillhöra exakt en
-avdelning. En avdelning kan ha flera anställda eller ännu sakna anställda. För varje avdelning ska namn och kontorsort
-lagras.
+- Personal 
 
---
+Information om de anställda inom företaget.
 
-### Verksamhetsbeskrivning: passerkort
+- Avdelgning
 
-Företaget delar ut passerkort till vissa av sina anställda. En anställd kan ha högst ett passerkort, men behöver inte ha
-något. Varje registrerat passerkort tillhör exakt en anställd. För passerkortet ska systemet lagra ett unikt kortnummer,
-utfärdandedatum och sista giltighetsdatum. Systemet ska förhindra att samma anställd får flera registrerade kort.
+Information om de olika lokaler samt lokalsort som företaget använder
 
---
+- Passerkort
 
-```sql
+Information om passerkort samt vilken anställd det tillhör.
 
-```
+
+### Attribut 
+
+#### Avdelning
+
+    section
+
+        name, sträng som inte är null, begränsad till 80 chars
+        city, sträng som inte är null, begränsad till 80 chars
+        Primär nyckel är name
+
+
+#### Personal
+
+    employees
+
+        first name, sträng som inte är null, begränsad till 20 chars
+        last name, sträng som inte är null, begränsad till 20 chars
+        email address, sträng som inte är null, begränsad till 60 chars, är unik
+        date of hire, datum
+        section name, sträng som inte är null, begränsad till 45 chars,
+        främmande nyckel, section name refererar till namnet av en avdelning.
+        Primär nyckel är email address
+    
+
+#### Passerkort
+
+    passcard
+        card number, int, automatisk ökning, unik
+        date of issue, datum
+        date of expire, datum
+        employee, sträng, primär nyckel
+        främmande nyckel, employee, refererar till anställd personals email address.

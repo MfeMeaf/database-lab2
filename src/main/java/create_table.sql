@@ -1,9 +1,12 @@
+USE iths_lab_felix_lab2;
+
+
 -- verify attributes
 -- Sections : Hold name, city and employees if any
 CREATE TABLE section(
                         name VARCHAR(80) NOT NULL,
-                        city VARCHAR(40) NOT NULL,
-                        PRIMARY KEY (name),
+                        city VARCHAR(80) NOT NULL,
+                        PRIMARY KEY (name)
 );
 
 
@@ -27,6 +30,6 @@ CREATE TABLE passcard(
                         card_number INT AUTO_INCREMENT UNIQUE,
                         date_of_issue DATE,
                         date_of_expire DATE,
-                        employee,
+                        employee VARCHAR(60) NOT NULL,
                         FOREIGN KEY (employee) REFERENCES employees(email_address)
-)
+);
