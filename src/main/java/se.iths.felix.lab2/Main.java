@@ -18,7 +18,7 @@ class Main {
 
         // Create employees
         Employee felix = new Employee("Felix", "lamu", "felix.lamu@kebab.se", LocalDate.of(2026,11,26), deimos);
-        Employee richard = new Employee("Richard", "Ivarsson", "richard.ivarsson@kebab.se", LocalDate.of(2026,11,26), proteus.getName());
+        Employee richard = new Employee("Richard", "Ivarsson", "richard.ivarsson@kebab.se", LocalDate.of(2026,11,26), proteus);
 
         felix.setPassCard(new Passcard(1,LocalDate.of(2026,11,26), LocalDate.of(2027,11,26)));
 
