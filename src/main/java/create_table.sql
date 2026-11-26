@@ -18,7 +18,7 @@ CREATE TABLE employees (
                            last_name VARCHAR(20) NOT NULL,
                            email_address VARCHAR(60) NOT NULL UNIQUE,
                            date_of_hire DATE,
-                           section_name VARCHAR(45) NOT NULL,
+                           section_name VARCHAR(80) NOT NULL,
                            FOREIGN KEY (section_name) REFERENCES section(name),
                            PRIMARY KEY (email_address)
 );
