@@ -97,6 +97,11 @@ INNER JOIN section AS s ON e.section_name = s.name;
 
 ### Left Join
 
+```sql
+SELECT s.name, concat(e.first_name, ' ', e.last_name ) AS full_name
+FROM section AS s
+         LEFT JOIN employee AS e ON e.section = s.name;
+```
 
 #### Result
 
