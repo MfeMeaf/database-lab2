@@ -40,7 +40,7 @@ man vill bygga på tabellen för att lägga till mer information om filmen t.ex 
 ### Resonemang
 
 Med den uppdaterade tabellen och de två nya undviker vi att samla upp flera stycken av information inom ett attribut
-i underlags tabellen samt har vi samlat film information i en egen tabel som gör det änklare att lägga till annan information
+i underlags tabellen samt har vi samlat film information i en egen tabel som gör det enklare att lägga till annan information
 om film. Då speltiden av filmen är mer relevant för information om filmen än om uthyrningen av sig själv passar det även 
 mer i film tabellen.
 
